@@ -15,8 +15,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 
 const loginSchema = z.object({
-  email: z.string().email('Please enter a valid email address'),
-  password: z.string().min(1, 'Password is required'),
+  email: z.string().email('Please Enter a Valid Email Address'),
+  password: z.string().min(1, 'Password is Required'),
 });
 
 type LoginForm = z.infer<typeof loginSchema>;
@@ -44,7 +44,7 @@ export default function LoginPage() {
           <div className="flex justify-center mb-4">
             <Briefcase className="h-8 w-8 text-primary" />
           </div>
-          <CardTitle className="text-2xl">Welcome back</CardTitle>
+          <CardTitle className="text-2xl">Welcome Back</CardTitle>
           <CardDescription>
             Sign in to your JobHub account
           </CardDescription>
@@ -56,7 +56,7 @@ export default function LoginPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="john@example.com"
+                placeholder="Afsana@example.com"
                 {...register('email')}
                 className={errors.email ? 'border-destructive' : ''}
               />
@@ -93,15 +93,6 @@ export default function LoginPage() {
                 <p className="text-sm text-destructive">{errors.password.message}</p>
               )}
             </div>
-
-            {/* <div className="flex items-center justify-between">
-              <Link
-                href="/auth/forgot-password"
-                className="text-sm text-primary hover:underline"
-              >
-                Forgot password?
-              </Link>
-            </div> */}
 
             <Button type="submit" className="w-full" disabled={isLoading}>
               {isLoading ? 'Signing in...' : 'Sign in'}
