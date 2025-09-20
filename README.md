@@ -1,6 +1,6 @@
 # JobHub - Full-Stack Job Portal Application
 
-A comprehensive job portal application built with the MERN stack, featuring role-based authentication, real-time chat, and advanced job matching.
+A comprehensive job portal application built with the MERN stack, featuring role-based authentication and advanced job matching.
 
 ## 🚀 Features
 
@@ -21,7 +21,6 @@ A comprehensive job portal application built with the MERN stack, featuring role
 - **State Management**: React Query for server state management
 - **Form Handling**: react-hook-form with zod validation
 - **Real-time Communication**: Socket.io for instant messaging
-- **File Storage**: Cloudinary integration for media uploads
 - **Database**: MongoDB with Mongoose ODM
 - **API**: RESTful API with Express.js and comprehensive error handling
 
@@ -35,7 +34,6 @@ A comprehensive job portal application built with the MERN stack, featuring role
 - **UI Components**: shadcn/ui, Radix UI
 - **State Management**: TanStack React Query
 - **Forms**: react-hook-form + zod
-- **Real-time**: Socket.io Client
 
 ### Backend
 
