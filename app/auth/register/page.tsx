@@ -81,10 +81,8 @@ export default function RegisterPage() {
     const { confirmPassword, ...registerData } = data;
     const success = await registerUser(registerData);
 
-    // registerUser function ইতিমধ্যে redirect handle করছে
-    // তাই এখানে আলাদা redirect এর প্রয়োজন নেই
+   
     if (success) {
-      // Optional: কোন additional logic যদি থাকে
       console.log('Registration successful');
     }
   };
@@ -108,7 +106,7 @@ export default function RegisterPage() {
                 <Label htmlFor="firstName">First Name</Label>
                 <Input
                   id="firstName"
-                  placeholder="John"
+                  placeholder="First Name"
                   {...register('firstName')}
                   className={errors.firstName ? 'border-destructive' : ''}
                 />
@@ -123,7 +121,7 @@ export default function RegisterPage() {
                 <Label htmlFor="lastName">Last Name</Label>
                 <Input
                   id="lastName"
-                  placeholder="Doe"
+                  placeholder="Last Name"
                   {...register('lastName')}
                   className={errors.lastName ? 'border-destructive' : ''}
                 />
@@ -140,7 +138,7 @@ export default function RegisterPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="john@example.com"
+                placeholder="Afsana@example.com"
                 {...register('email')}
                 className={errors.email ? 'border-destructive' : ''}
               />
@@ -161,7 +159,7 @@ export default function RegisterPage() {
                     <SelectTrigger
                       className={errors.role ? 'border-destructive' : ''}
                     >
-                      <SelectValue placeholder="Select your role" />
+                      <SelectValue placeholder="Select Your Role" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="seeker">Job Seeker</SelectItem>
